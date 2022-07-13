@@ -29,10 +29,10 @@ jobs:
   deploy:
     executor: docker/docker
     steps:
+      # Please add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
       - add_ssh_keys:
           fingerprints:
-             - "f4:65:ef:94:d0:0b:4f:c1:1b:e6:74:bc:fb:54:c4:1b"
-      # Please add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
+            - "f4:65:ef:94:d0:0b:4f:c1:1b:e6:74:bc:fb:54:c4:1b"
       - run: ssh -oStrictHostKeyChecking=no root@147.139.139.218 './home/namthp/namthp-react-docker/deploy.sh'
 
 workflows:
