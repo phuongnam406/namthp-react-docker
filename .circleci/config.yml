@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   node: circleci/node@3.0.0
   docker: circleci/docker@1.4.0
-#firt test
+
 jobs:
   build-and-push:
     environment:
@@ -26,6 +26,14 @@ jobs:
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
+  deploy:
+    executor: docker/docker
+    steps:
+      # Please add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
+      - add_ssh_keys:
+          fingerprints:
+            - $SSH_KEY_FINGERPRINT
+      - run: ssh -oStrictHostKeyChecking=no root@$147.139.139.218 './deploy.sh'
 
 workflows:
   my-pipeline:
@@ -37,7 +45,7 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - master
       # uncomment the 3 following lines to enable deploying
       # - deploy:
       #     requires:
