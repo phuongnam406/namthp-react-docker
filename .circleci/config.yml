@@ -7,7 +7,7 @@ orbs:
 jobs:
   build-and-push:
     environment:
-      DOCKER_IMAGE: nhtua/react-docker
+      DOCKER_IMAGE: phuongnam406/react-docker
       DOCKER_TAG: latest
     executor: docker/docker
     steps:
