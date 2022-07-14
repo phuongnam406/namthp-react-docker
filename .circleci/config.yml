@@ -33,7 +33,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "51:e9:eb:55:7e:c8:1e:d0:fc:91:51:04:1a:fa:b7:c3"
-      - run: ssh root@147.139.139.218 '/home/namthp/namthp-react-docker/./deploy.sh'
+      - run: ssh circaleci@147.139.139.218 '/home/namthp/namthp-react-docker/./deploy.sh'
 
 workflows:
   my-pipeline:
