@@ -29,7 +29,7 @@ jobs:
   deploy:
     executor: docker/docker
     steps:
-      # lease add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
+      # lease add $SSH_KEY_F1INGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
       - add_ssh_keys:
           fingerprints:
             - "51:e9:eb:55:7e:c8:1e:d0:fc:91:51:04:1a:fa:b7:c3"
