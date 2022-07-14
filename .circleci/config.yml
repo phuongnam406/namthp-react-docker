@@ -2,7 +2,7 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
-  docker: circleci/docker@19.03.13
+  docker: circleci/docker@1.9.1
 #firt te1s
 jobs:
   build-and-push:
