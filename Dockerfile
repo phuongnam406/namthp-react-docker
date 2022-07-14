@@ -1,7 +1,7 @@
 FROM node:latest as build
 WORKDIR /app
 COPY . /app
-RUN npm install && npm run build -f
+RUN npm install -g npm@8.14.0 && npm run build
 
 FROM nginx:latest
 COPY --from=build /app/build /usr/share/nginx/html
