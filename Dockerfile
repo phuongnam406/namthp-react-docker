@@ -1,7 +1,7 @@
-FROM node:latest as build
+FROM node:14-stretch-slim as build
 WORKDIR /app
 COPY . /app
-RUN npm install -g npm@8.14.0 && npm run build -f
+RUN npm install && npm run build
 
 FROM nginx:latest
 COPY --from=build /app/build /usr/share/nginx/html
