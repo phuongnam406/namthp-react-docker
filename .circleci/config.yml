@@ -37,7 +37,7 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - master
       # uncomment the 3 following lines to enable deploying
       # - deploy:
       #     requires:
