@@ -32,7 +32,7 @@ jobs:
       # lease add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
       - add_ssh_keys:
           fingerprints:
-            - "f4:65:ef:94:d0:0b:4f:c1:1b:e6:74:bc:fb:54:c4:1b"
+            - "51:e9:eb:55:7e:c8:1e:d0:fc:91:51:04:1a:fa:b7:c3"
       - run: ssh root@147.139.139.218 '/home/namthp/namthp-react-docker/./deploy.sh'
 
 workflows:
